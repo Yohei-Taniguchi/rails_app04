@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_cd: MyString
+  yarn: MyString
+  strech_rate: 1.5
+  ori_mr: 1.5
+  plan_width: 1
+  plan_repeart: 1
+  special_width: 1
+  special_repeart: 1
+  repeart_count: 1
+  process_type: MyString
+  remarks: MyText
+  lace_design_id: 1
+
+two:
+  item_cd: MyString
+  yarn: MyString
+  strech_rate: 1.5
+  ori_mr: 1.5
+  plan_width: 1
+  plan_repeart: 1
+  special_width: 1
+  special_repeart: 1
+  repeart_count: 1
+  process_type: MyString
+  remarks: MyText
+  lace_design_id: 1

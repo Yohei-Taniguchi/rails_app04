@@ -1,0 +1,146 @@
+<%= form_for @lace_design, :html => { :class => "form-horizontal lace_design" } do |f| %>
+
+  <% if @lace_design.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@lace_design.errors.count, "error") %> prohibited this lace_design from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @lace_design.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :lace_design_no, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :lace_design_no, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:lace_design_no) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :use, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :use, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:use) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :lace_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :lace_type, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:lace_type) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rs, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rs, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rs) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :carry, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :carry, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:carry) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :point, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :point, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:point) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :nominal_width, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :nominal_width, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:nominal_width) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fin_mr, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :fin_mr, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:fin_mr) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :mc_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :mc_type, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:mc_type) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :honsu, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :honsu, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:honsu) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sherring, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sherring, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sherring) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :halfcut, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :halfcut, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:halfcut) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :skecher, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :skecher, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:skecher) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :design_code, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :design_code, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:design_code) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :design_no, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :design_no, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:design_no) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :drafman, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :drafman, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:drafman) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :remarks, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :remarks, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:remarks) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                lace_designs_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

@@ -1,0 +1,2 @@
+json.extract! item_design, :id, :item_cd, :yarn, :strech_rate, :ori_mr, :plan_width, :plan_repeart, :special_width, :special_repeart, :repeart_count, :process_type, :remarks, :lace_design_id, :created_at, :updated_at
+json.url item_design_url(item_design, format: :json)

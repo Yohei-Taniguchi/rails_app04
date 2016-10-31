@@ -1,0 +1,104 @@
+<%= form_for @item_design, :html => { :class => "form-horizontal item_design" } do |f| %>
+
+  <% if @item_design.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@item_design.errors.count, "error") %> prohibited this item_design from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @item_design.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :item_cd, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :item_cd, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:item_cd) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :yarn, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :yarn, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:yarn) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :strech_rate, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :strech_rate, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:strech_rate) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ori_mr, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :ori_mr, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:ori_mr) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :plan_width, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :plan_width, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:plan_width) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :plan_repeart, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :plan_repeart, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:plan_repeart) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :special_width, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :special_width, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:special_width) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :special_repeart, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :special_repeart, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:special_repeart) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :process_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :process_type, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:process_type) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :remarks, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :remarks, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:remarks) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :lace_design_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :lace_design_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:lace_design_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                item_designs_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

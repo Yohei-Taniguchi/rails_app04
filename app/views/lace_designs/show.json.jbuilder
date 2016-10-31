@@ -1,0 +1,1 @@
+json.partial! "lace_designs/lace_design", lace_design: @lace_design

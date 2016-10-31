@@ -1,0 +1,2 @@
+json.extract! lace_design, :id, :lace_design_no, :use, :lace_type, :rs, :carry, :point, :nominal_width, :fin_mr, :mc_type, :honsu, :sherring, :halfcut, :skecher, :design_code, :design_no, :drafman, :remarks, :created_at, :updated_at
+json.url lace_design_url(lace_design, format: :json)
